@@ -10,4 +10,5 @@ class Page(models.Model):
 		return self.title
 
 	def get_absolute_url(self):
-		return 'pages_detail/' + str(self.id)
+		from django.urls import reverse
+		return reverse('pages-detail', args=[str(self.id)])
