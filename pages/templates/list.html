@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	{% for page in pages_list%}
+		<ul>
+			<a href={{page.get_absolute_url}}>
+			<li>
+				{{page.title}} <br>
+				{{page.last_update}}
+
+			</li><a>
+		</ul><br>
+	{% endfor %}
+
+</body>
+</html>
